@@ -41,7 +41,8 @@ html.dark {
     --product-card-shadow-color: rgba(0, 0, 0, 0.20);
 
     //Filter Form
-    --filter-form-bg: #FFF;
+    --filter-form-bg: #2f3441;
     --filter-form-shadow: rgba(0, 0, 0, 0.40);
     --filter-form-tag-bg: #171C28;
+    --filter-form-arrow: brightness(0) saturate(100%) invert(18%) sepia(6%) saturate(1741%) hue-rotate(186deg) brightness(98%) contrast(92%);
 }
