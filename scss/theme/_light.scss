@@ -62,13 +62,20 @@ html {
     --form-placeholder-color: #D2D1D6;
 
     //Product Detail
-    --product-page-bg: #FFF;
+    --product-detail-bg: #FFF;
+    --product-detail-info-bg: #F6F6F6;
+    --product-info-price-color: #000000;
+
+    @include abstracts.screen(md) {
+        --product-detail-bg: #FAFAFD;
+        --product-detail-info-bg: #FFF;
+    }
 
     //Breadcrumbs
     --breadcrumbs-bg: #F6F6F6;
     --breadcrumbs-shadow: rgba(237, 237, 246, 0.20);
 
-    //Product Detail
-    --product-info-bg: #F6F6F6;
-    --product-info-price-color: #000000;
+    @include abstracts.screen(md) {
+        --breadcrumbs-bg: #FFF;
+    }
 }

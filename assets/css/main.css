@@ -1296,11 +1296,24 @@ html {
 }
 html {
   --form-placeholder-color: #D2D1D6;
-  --product-page-bg: #FFF;
+  --product-detail-bg: #FFF;
+  --product-detail-info-bg: #F6F6F6;
+  --product-info-price-color: #000000;
+}
+@media screen and (max-width: 767.98px) {
+  html {
+    --product-detail-bg: #FAFAFD;
+    --product-detail-info-bg: #FFF;
+  }
+}
+html {
   --breadcrumbs-bg: #F6F6F6;
   --breadcrumbs-shadow: rgba(237, 237, 246, 0.20);
-  --product-info-bg: #F6F6F6;
-  --product-info-price-color: #000000;
+}
+@media screen and (max-width: 767.98px) {
+  html {
+    --breadcrumbs-bg: #FFF;
+  }
 }
 
 html.dark {
@@ -1344,10 +1357,10 @@ html.dark {
   --auth-intro-text-color: #B9BABE;
   --auth-heading-color: #B9BABE;
   --form-placeholder-color: #B9BABE;
-  --product-page-bg: #292E39;
+  --product-detail-bg: #292E39;
   --breadcrumbs-bg: #171C28;
   --breadcrumbs-shadow: rgba(23, 28, 40, 0.20);
-  --product-info-bg: #171C28;
+  --product-detail-info-bg: #171C28;
   --product-info-price-color: #EEE;
 }
 
@@ -1607,7 +1620,6 @@ html.dark {
 }
 
 .footer {
-  margin-top: 30px;
   background: var(--footer-bg);
 }
 .footer__inner {
@@ -2559,6 +2571,7 @@ html.dark {
 @media screen and (max-width: 767.98px) {
   .breadcrumbs {
     gap: 16px;
+    border-radius: 20px;
   }
 }
 .breadcrumbs__link {
@@ -2580,6 +2593,9 @@ html.dark {
   color: inherit;
 }
 
+.home {
+  margin-bottom: 50px;
+}
 .home__container {
   margin-top: 40px;
 }
@@ -2787,11 +2803,17 @@ html.dark {
   display: flex;
   flex-direction: column;
   min-height: 80vh;
-  background: var(--product-page-bg);
+  background: var(--product-detail-bg);
+  padding-bottom: 50px;
 }
 
 .product-container {
   margin: 30px 0;
+}
+
+.prod-info-container {
+  border-radius: 20px;
+  background: #FFF;
 }
 
 .prod-preview {
@@ -2801,6 +2823,11 @@ html.dark {
   .prod-preview {
     display: flex;
     flex-direction: row-reverse;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .prod-preview {
+    padding: 16px;
   }
 }
 .prod-preview__list {
@@ -2865,7 +2892,7 @@ html.dark {
 
 .prod-info {
   padding: 60px;
-  background: var(--product-info-bg);
+  background: var(--product-detail-info-bg);
 }
 @media screen and (max-width: 1399.98px) {
   .prod-info {
@@ -2875,6 +2902,13 @@ html.dark {
 @media screen and (max-width: 991.98px) {
   .prod-info {
     margin-top: 30px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .prod-info {
+    border-radius: 20px;
+    margin-top: 0;
+    padding: 0 16px 16px;
   }
 }
 .prod-info__heading {
@@ -2941,11 +2975,21 @@ html.dark {
     padding-left: 10px;
   }
 }
+@media screen and (max-width: 991.98px) {
+  .prod-props {
+    padding-left: 0;
+  }
+}
 
 .prod-prop {
   display: flex;
   gap: 16px;
   margin-top: 30px;
+}
+@media screen and (max-width: 767.98px) {
+  .prod-prop {
+    margin-top: 20px;
+  }
 }
 .prod-prop__icon {
   align-self: flex-start;
