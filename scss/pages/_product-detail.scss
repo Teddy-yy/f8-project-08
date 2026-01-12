@@ -9,12 +9,16 @@
 }
 
 .product-container {
-    margin: 30px 0;
+    margin-top: 30px;
+
+    @include abstracts.screen(md) {
+        margin-top: 20px;
+    }
 }
 
-.prod-info-container {
+.prod-info-content {
     border-radius: 20px;
-    background: #FFF;
+    background: var(--product-detail-info-content-bg);
 }
 
 .prod-preview {
@@ -77,13 +81,13 @@
         object-fit: contain;
         border: 1.5px solid rgba(158, 157, 168, 0.3);
         border-radius: 8px;
-        cursor: pointer;
         opacity: 0.9;
         transition: opacity 0.3s ease, border-color 0.3s ease;
 
-        &:hover {
+        &:not(&--current):hover {
             opacity: 1;
             border-color: #9e9da8;
+            cursor: pointer;
         }
 
         &--current {
@@ -95,6 +99,7 @@
 
 .prod-info {
     padding: 60px;
+    border-radius: 10px;
     background: var(--product-detail-info-bg);
     
     @include abstracts.screen(xxl) {
@@ -123,7 +128,7 @@
     }
 
     &__tag {
-        background: #EDEDF6;
+        background: var(--product-detail-tag-bg);
     }
 
     &__card {
@@ -148,11 +153,12 @@
     &__tax {
         padding: 2px 8px;
         margin-left: 10px;
+        border-radius: 4px;
+        background: rgb(103 176 68 / 0.2);
         color: #67B044;
         font-size: 1.4rem;
         font-weight: 500;
         line-height: 142.857%;
-        background: linear-gradient(0deg, rgba(255, 255, 255, 0.80) 0%, rgba(255, 255, 255, 0.80) 100%), #67B044;
     }
 
     &__total-price {
@@ -193,10 +199,6 @@
     display: flex;
     gap: 16px;
     margin-top: 30px;
-
-    @include abstracts.screen(md) {
-        margin-top: 20px;
-    }
 
     &__icon {
         align-self: flex-start;

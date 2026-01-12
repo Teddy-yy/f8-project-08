@@ -64,7 +64,9 @@ html {
     //Product Detail
     --product-detail-bg: #FFF;
     --product-detail-info-bg: #F6F6F6;
+    --product-detail-info-content-bg: #FFF;
     --product-info-price-color: #000000;
+    --product-detail-tag-bg: #EDEDF6;
 
     @include abstracts.screen(md) {
         --product-detail-bg: #FAFAFD;
@@ -78,4 +80,7 @@ html {
     @include abstracts.screen(md) {
         --breadcrumbs-bg: #FFF;
     }
+
+    //Search Bar
+    --search-bar-bg: #FFF;
 }
