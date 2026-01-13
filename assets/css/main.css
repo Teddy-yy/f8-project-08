@@ -89,6 +89,14 @@ input {
   background: transparent;
 }
 
+i, em {
+  font-style: italic;
+}
+
+b, strong {
+  font-weight: 600;
+}
+
 .icon {
   filter: var(--icon-color);
 }
@@ -2670,6 +2678,63 @@ html.dark {
   font-weight: 500;
   line-height: 144.444%;
   margin-left: 12px;
+}
+
+.text-content {
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+.text-content h1, .text-content h2, .text-content h3, .text-content h4, .text-content h5, .text-content h6 {
+  font-weight: 600;
+}
+.text-content h1 {
+  font-size: 2.6rem;
+}
+.text-content h2 {
+  font-size: 2.2rem;
+}
+.text-content h3 {
+  font-size: 1.8rem;
+}
+.text-content h4 {
+  font-size: 1.6rem;
+}
+.text-content h5 {
+  font-size: 1.4rem;
+}
+.text-content h6 {
+  font-size: 1.2rem;
+}
+.text-content h1, .text-content h2, .text-content h3, .text-content h4, .text-content h5, .text-content h6, .text-content p, .text-content blockquote, .text-content img, .text-content figure, .text-content table, .text-content ul, .text-content ol {
+  margin: 20px 0;
+}
+.text-content img {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 90%;
+}
+.text-content img + em {
+  display: block;
+  text-align: center;
+}
+.text-content a {
+  color: #FFB700;
+  text-decoration: underline;
+}
+.text-content blockquote {
+  background: rgba(255, 183, 0, 0.1);
+  padding: 20px;
+  border-left: 3px solid #FFB700;
+}
+.text-content blockquote p {
+  margin: 0;
+}
+.text-content hr {
+  border: none;
+  margin: 40px 0;
+  height: 1px;
+  background: #ebebeb;
 }
 
 .home {

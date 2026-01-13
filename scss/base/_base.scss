@@ -41,6 +41,14 @@ input {
     background: transparent;
 }
 
+i, em {
+    font-style: italic;
+}
+
+b, strong {
+    font-weight: 600;
+}
+
 .icon {
     filter: var(--icon-color);
 }
