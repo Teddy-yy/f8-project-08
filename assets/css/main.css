@@ -1715,6 +1715,11 @@ html.dark {
   border-left: none;
   border-right: none;
 }
+.act-dropdown__separate {
+  margin: 20px 0;
+  height: 1px;
+  background: var(--header-act-dropdown-border-color);
+}
 .act-dropdown__row {
   display: flex;
   align-items: center;
