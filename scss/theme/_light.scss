@@ -82,9 +82,9 @@ html {
     --breadcrumbs-bg: #F6F6F6;
     --breadcrumbs-shadow: rgba(237, 237, 246, 0.20);
 
-    @include abstracts.screen(md) {
+    /* @include abstracts.screen(md) {
         --breadcrumbs-bg: #FFF;
-    }
+    } */
 
     //Search Bar
     --search-bar-bg: #FFF;
@@ -100,7 +100,9 @@ html {
     --text-content-hr-bg: #ebebeb;
 
     // Checkout
-    --checkout-page-breadcrumbs-bg: #FFF;
-    --cart-info-bg: #FFF;
-    --cart-info-shadow: rgba(237, 237, 246, 0.20);
+    --checkout-breadcrumbs-bg: #FFF;
+    --checkout-cart-info-bg: #FFF;
+    --checkout-cart-info-shadow: rgba(237, 237, 246, 0.20);
+    --checkout-border-color: #D2D1D6;
+    --checkout-gift-shadow: rgba(237, 237, 246, 0.20);
 }
