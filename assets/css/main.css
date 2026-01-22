@@ -1339,6 +1339,8 @@ html {
   --checkout-cart-info-shadow: rgba(237, 237, 246, 0.20);
   --checkout-border-color: #D2D1D6;
   --checkout-gift-shadow: rgba(237, 237, 246, 0.20);
+  --dialog-bg: #FFF;
+  --dialog-shadow: rgba(237, 237, 246, 0.20);
 }
 
 html.dark {
@@ -1408,6 +1410,8 @@ html.dark {
   --checkout-cart-info-shadow: rgba(23, 28, 40, 0.20);
   --checkout-border-color: #292E39;
   --checkout-gift-shadow: rgba(23, 28, 40, 0.20);
+  --dialog-bg: #2f3441;
+  --dialog-shadow: rgba(23, 28, 40, 0.40);
 }
 
 .top-act__btn, .top-act__group, .top-act, .navbar__link, .navbar__list, .top-bar {
@@ -2251,7 +2255,12 @@ html.dark {
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 144.444%;
+  white-space: nowrap;
   user-select: none;
+}
+.btn--small {
+  height: 40px;
+  padding: 0 16px;
 }
 .btn + .btn:no(.btn--no-margin) {
   margin-left: 20px;
@@ -2903,6 +2912,62 @@ html.dark {
   margin: 40px 0;
   height: 1px;
   background: var(--text-content-hr-bg);
+}
+
+.dialog__overlay, .dialog {
+  position: fixed;
+  inset: 0;
+}
+
+.dialog {
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity, visibility;
+  transition-duration: 0.3s;
+}
+.dialog.show {
+  opacity: 1;
+  visibility: visible;
+}
+.dialog__overlay {
+  background: rgba(0, 0, 0, 0.4);
+}
+.dialog__content {
+  position: relative;
+  z-index: 1;
+  background: #FFF;
+  max-width: min(450px, 100% - 40px);
+  padding: 30px;
+  border-radius: 20px;
+  background: var(--dialog-bg);
+  box-shadow: 0 20px 60px 10px var(--dialog-shadow);
+}
+.dialog__text {
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+.dialog__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 30px;
+}
+@media screen and (max-width: 767.98px) {
+  .dialog {
+    padding: 20px;
+  }
+  .dialog__bottom {
+    gap: 20px;
+  }
+  .dialog__btn {
+    flex: 1;
+  }
 }
 
 .home {
