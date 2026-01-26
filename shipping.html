@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" class="">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=\, initial-scale=1.0">
@@ -44,19 +44,19 @@
             <!-- Breadcrumbs -->
             <div class="checkout-container">
                 <ul class="breadcrumbs checkout-page__breadcrumbs">
-                    <li>
+                    <li class="form__option">
                         <a href="#!" class="breadcrumbs__link">
                             Home
                             <img src="./assets/icons/arrow-right.svg" alt="">
                         </a>
                     </li>
-                    <li>
+                    <li class="form__option">
                         <a href="./checkout.html" class="breadcrumbs__link">
                             Checkout
                             <img src="./assets/icons/arrow-right.svg" alt="">
                         </a>
                     </li>
-                    <li>
+                    <li class="form__option">
                         <a href="#!" class="breadcrumbs__link breadcrumbs__link--current">Shipping</a>
                     </li>
                 </ul>
@@ -404,8 +404,35 @@
                     <div class="form__group">
                         <label for="city" class="form__label form__label--small">City/District/Town</label>
                         <div class="form__text-input form__text-input--small">
-                            <input type="text" name="" id="city" placeholder="City/District/Town" class="form__input">
+                            <input type="text" name="" id="city" placeholder="City/District/Town" class="form__input js-toggle" toggle-target="#city-dialog"> 
                             <img src="./assets/icons/form-error.svg" class="form__input-icon-error">
+
+                            <div id="city-dialog" class="form__select-dialog hide">
+                                <div class="form__search">
+                                    <input type="text" placeholder="Search" class="form__search-input">
+                                    <img src="./assets/icons/search.svg" alt="" class="form__search-icon">
+                                </div>
+                                <ul class="form__options-list">
+                                    <li class="form__option">Ha Noi</li>
+                                    <li class="form__option form__option--current">Ho Chi Minh</li>
+                                    <li class="form__option">Da Nang</li>
+                                    <li class="form__option">Hai Duong</li>
+                                    <li class="form__option">Thai Nguyen</li>
+                                    <li class="form__option">Ha Long</li>
+                                    <li class="form__option">Mong Cai</li>
+                                    <li class="form__option">Uong Bi</li>
+                                    <li class="form__option">Bac Ninh</li>
+                                    <li class="form__option">Tu Son</li>
+                                    <li class="form__option">Mong Cai</li>
+                                    <li class="form__option">Uong Bi</li>
+                                    <li class="form__option">Bac Ninh</li>
+                                    <li class="form__option">Tu Son</li>
+                                    <li class="form__option">Mong Cai</li>
+                                    <li class="form__option">Uong Bi</li>
+                                    <li class="form__option">Bac Ninh</li>
+                                    <li class="form__option">Tu Son</li>
+                                </ul>
+                            </div>
                         </div>
                         <p class="form__error">City/District/Town must be at least 11 characters.</p>
                     </div>
