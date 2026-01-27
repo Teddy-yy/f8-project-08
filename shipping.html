@@ -404,7 +404,7 @@
                     <div class="form__group">
                         <label for="city" class="form__label form__label--small">City/District/Town</label>
                         <div class="form__text-input form__text-input--small">
-                            <input type="text" name="" id="city" placeholder="City/District/Town" class="form__input js-toggle" toggle-target="#city-dialog"> 
+                            <input type="text" name="" id="city" placeholder="City/District/Town" class="form__input js-toggle" toggle-target="#city-dialog" readonly> 
                             <img src="./assets/icons/form-error.svg" class="form__input-icon-error">
 
                             <!-- Select dialog -->
@@ -448,7 +448,7 @@
                 </div>
                 <div class="modal__bottom">
                     <button class="btn btn--small btn--text modal__btn js-toggle" toggle-target="#add-new-address">Cancel</button>
-                    <button class="btn btn--small btn--primary modal__btn btn--no-margin">Create</button>
+                    <button class="btn btn--small btn--primary modal__btn btn--no-margin js-toggle" toggle-target="#add-new-address">Create</button>
                 </div>
             </form>
         </div>

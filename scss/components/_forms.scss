@@ -166,14 +166,14 @@ $error-color: #ed4337;
         font-size: 1.8rem;
         font-weight: 600;
         text-align: center;
-        padding: 14px;
+        padding: 20px;
     }
 
     &__close-dialog {
         position: absolute;
         right: 0;
         top: 0;
-        padding: 2px 18px;
+        padding: 12px 18px;
         font-size: 3rem;
         opacity: 0.8;
     }
@@ -187,12 +187,12 @@ $error-color: #ed4337;
         height: 38px;
 
         @include abstracts.screen(lg) {
-            height: 42px;
+            height: 48px;
         }
 
         @include abstracts.screen(sm) {
             padding: 0 14px;
-            margin: 10px 20px 0;
+            margin: 10px 30px 0;
             border: 1px solid #d1d2d6;
             border-radius: 10px;
         }
@@ -206,6 +206,10 @@ $error-color: #ed4337;
         &-icon {
             width: 16px;
             margin-left: 10px;
+
+            @include abstracts.screen(lg) {
+                width: 20px;
+            }
         }
     }
 
@@ -214,6 +218,10 @@ $error-color: #ed4337;
         overflow-y: auto;
         overscroll-behavior: contain;
         margin-top: 10px;
+
+        @supports (-webkit-touch-callout: none) {
+            padding-bottom: 300px;
+        }
     }
 
     &__option {
@@ -231,7 +239,8 @@ $error-color: #ed4337;
         }
 
         @include abstracts.screen(lg) {
-            padding: 14px 20px;
+            padding: 18px 30px;
+            font-size: 1.6rem;
         }
     }
 
