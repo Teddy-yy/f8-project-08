@@ -86,6 +86,11 @@
         border-radius: 99px;
     }
 
+    &--danger {
+        color: #FFF;
+        background: #ed4337;
+    }
+
     &:hover {
         opacity: 0.8;
     }

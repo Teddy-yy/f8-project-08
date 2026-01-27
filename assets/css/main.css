@@ -2293,6 +2293,10 @@ html.dark {
 .btn--rounded {
   border-radius: 99px;
 }
+.btn--danger {
+  color: #FFF;
+  background: #ed4337;
+}
 .btn:hover {
   opacity: 0.8;
 }
@@ -2675,6 +2679,12 @@ html.dark {
   visibility: visible;
   translate: 0;
 }
+.form__dialog-heading {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 14px;
+}
 .form__close-dialog {
   position: absolute;
   right: 0;
@@ -2698,8 +2708,10 @@ html.dark {
 }
 @media screen and (max-width: 575.98px) {
   .form__search {
-    flex-direction: row-reverse;
-    margin-top: 30px;
+    padding: 0 14px;
+    margin: 10px 20px 0;
+    border: 1px solid #d1d2d6;
+    border-radius: 10px;
   }
 }
 .form__search-input {
@@ -2707,19 +2719,9 @@ html.dark {
   height: 100%;
   font-size: 1.6rem;
 }
-@media screen and (max-width: 575.98px) {
-  .form__search-input {
-    padding-left: 8px;
-  }
-}
 .form__search-icon {
   width: 16px;
   margin-left: 10px;
-}
-@media screen and (max-width: 575.98px) {
-  .form__search-icon {
-    margin-left: 0;
-  }
 }
 .form__options-list {
   flex: 1;
@@ -2877,8 +2879,10 @@ html.dark {
 .breadcrumbs {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 16px 20px;
   padding: 20px;
+  min-height: 64px;
   border-radius: 10px;
   background: var(--breadcrumbs-bg);
   box-shadow: 0 20px 60px 10px var(--breadcrumbs-shadow);
@@ -2893,10 +2897,10 @@ html.dark {
   display: flex;
   align-items: center;
   gap: 8px;
+  color: #9E9DA8;
   font-size: 1.6rem;
   font-weight: 500;
   line-height: 150%;
-  color: #9E9DA8;
   white-space: nowrap;
 }
 @media screen and (max-width: 767.98px) {
@@ -3140,9 +3144,9 @@ html.dark {
   align-items: center;
   justify-content: flex-end;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 20px;
   padding-right: 20px;
-  margin-top: 30px;
+  margin-top: 50px;
 }
 @media screen and (max-width: 767.98px) {
   .modal__bottom {
@@ -3151,7 +3155,7 @@ html.dark {
 }
 @media screen and (max-width: 575.98px) {
   .modal__bottom {
-    margin-top: 20px;
+    margin-top: 40px;
   }
 }
 @media screen and (max-width: 767.98px) {
@@ -3765,6 +3769,7 @@ html.dark {
   }
 }
 .cart-item__content {
+  flex: 1;
   display: flex;
   align-self: flex-start;
 }

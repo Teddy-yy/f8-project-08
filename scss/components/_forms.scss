@@ -162,6 +162,13 @@ $error-color: #ed4337;
         }
     }
 
+    &__dialog-heading {
+        font-size: 1.8rem;
+        font-weight: 600;
+        text-align: center;
+        padding: 14px;
+    }
+
     &__close-dialog {
         position: absolute;
         right: 0;
@@ -184,27 +191,21 @@ $error-color: #ed4337;
         }
 
         @include abstracts.screen(sm) {
-            flex-direction: row-reverse;
-            margin-top: 30px;
+            padding: 0 14px;
+            margin: 10px 20px 0;
+            border: 1px solid #d1d2d6;
+            border-radius: 10px;
         }
 
         &-input {
             flex: 1;
             height: 100%;
             font-size: 1.6rem;
-
-            @include abstracts.screen(sm) {
-                padding-left: 8px;
-            }
         }
 
         &-icon {
             width: 16px;
             margin-left: 10px;
-
-            @include abstracts.screen(sm) {
-                margin-left: 0;
-            }
         }
     }
 
