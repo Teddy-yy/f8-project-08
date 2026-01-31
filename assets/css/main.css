@@ -118,7 +118,7 @@ b, strong {
 .separate {
   margin: var(--margin) 0;
   height: 1px;
-  background: #D2D1D6;
+  background: var(--separate-color);
 }
 
 .row > *, .container-fluid, .container {
@@ -1358,6 +1358,12 @@ html {
   --checkout-payment-item-bg: #F6F6F6;
   --dialog-bg: #FFF;
   --dialog-shadow: rgba(237, 237, 246, 0.20);
+  --profile-sidebar-bg: #FFF;
+  --profile-sidebar-shadow: rgba(237, 237, 246, 0.20);
+  --profile-sidebar-link-hover: #ebebeb;
+  --account-info-bg: #292E39;
+  --account-info-icon-bg: #171C28;
+  --separate-color: #D2D1D6;
 }
 
 html.dark {
@@ -1433,6 +1439,10 @@ html.dark {
   --checkout-payment-item-bg: #292E39;
   --dialog-bg: #2f3441;
   --dialog-shadow: rgba(23, 28, 40, 0.40);
+  --profile-sidebar-bg: #171C28;
+  --profile-sidebar-shadow: rgba(23, 28, 40, 0.20);
+  --profile-sidebar-link-hover: #2f3441;
+  --separate-color:#292E39;
 }
 
 .top-act__btn, .top-act__group, .top-act, .navbar__link, .navbar__list, .top-bar {
@@ -3274,7 +3284,9 @@ html.dark {
   justify-content: center;
   gap: 14px;
   height: 100%;
+  min-height: 170px;
   border: 1px dashed #D2D1D6;
+  border-radius: 10px;
 }
 .new-card__text {
   color: #D2D1D6;
@@ -3289,16 +3301,17 @@ html.dark {
   gap: 10px;
   padding: 10px;
   border-radius: 10px;
-  background: #F6F6F6;
+  background: var(--account-info-bg);
 }
 .account-info__icon {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
   width: 54px;
   height: 54px;
   border-radius: 8px;
-  background: #FFF;
+  background: var(--account-info-icon-bg);
 }
 .account-info__title {
   font-size: 1.5rem;
@@ -3313,12 +3326,18 @@ html.dark {
 
 .favorite-item {
   display: flex;
+  align-items: center;
   gap: 20px;
 }
 .favorite-item__thumb {
   width: 151px;
   height: 108px;
   object-fit: contain;
+}
+@media screen and (max-width: 991.98px) {
+  .favorite-item__thumb {
+    width: 80px;
+  }
 }
 .favorite-item__title {
   font-size: 1.5rem;
@@ -3330,6 +3349,13 @@ html.dark {
   align-items: center;
   gap: 20px;
   margin-top: 10px;
+}
+@media screen and (max-width: 575.98px) {
+  .favorite-item__content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
 }
 .favorite-item__price {
   font-size: 2.2rem;
@@ -4345,8 +4371,8 @@ html.dark {
 .profile__sidebar {
   padding-bottom: 30px;
   border-radius: 20px;
-  background: #FFF;
-  box-shadow: 0 20px 60px 10px rgba(237, 237, 246, 0.2);
+  background: var(--profile-sidebar-bg);
+  box-shadow: 0 20px 60px 10px var(--profile-sidebar-shadow);
   overflow: hidden;
 }
 .profile {
@@ -4358,6 +4384,7 @@ html.dark {
   align-items: center;
   padding: 35px 20px 20px;
   background: linear-gradient(180deg, rgba(26, 22, 46, 0) 0%, #1A162E 100%), url("../img/profile/cover.avif") no-repeat center/cover;
+  box-shadow: 0 20px 60px 10px var(--profile-sidebar-shadow);
   color: #FFF;
 }
 .profile-user__avatar {
@@ -4405,7 +4432,7 @@ html.dark {
   transition: background 0.2s;
 }
 .profile-menu__link:hover {
-  background: #ebebeb;
+  background: var(--profile-sidebar-link-hover);
 }
 .profile-menu__icon {
   display: flex;

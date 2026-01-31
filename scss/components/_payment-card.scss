@@ -97,7 +97,9 @@
     justify-content: center;
     gap: 14px;
     height: 100%;
+    min-height: 170px;
     border: 1px dashed #D2D1D6;
+    border-radius: 10px;
 
     &__text {
         color: #D2D1D6;
