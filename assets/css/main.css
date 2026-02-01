@@ -1361,8 +1361,8 @@ html {
   --profile-sidebar-bg: #FFF;
   --profile-sidebar-shadow: rgba(237, 237, 246, 0.20);
   --profile-sidebar-link-hover: #ebebeb;
-  --account-info-bg: #292E39;
-  --account-info-icon-bg: #171C28;
+  --account-info-bg: #F6F6F6;
+  --account-info-icon-bg: #FFF;
   --separate-color: #D2D1D6;
 }
 
@@ -1442,6 +1442,8 @@ html.dark {
   --profile-sidebar-bg: #171C28;
   --profile-sidebar-shadow: rgba(23, 28, 40, 0.20);
   --profile-sidebar-link-hover: #2f3441;
+  --account-info-bg: #292E39;
+  --account-info-icon-bg: #171C28;
   --separate-color:#292E39;
 }
 
@@ -3864,7 +3866,12 @@ html.dark {
   justify-content: space-between;
   gap: 30px;
 }
+.cart-info__back-arrow {
+  padding-right: 10px;
+}
 .cart-info__heading {
+  display: flex;
+  align-items: center;
   font-size: 2.4rem;
   font-weight: 700;
   line-height: 141.667%;
@@ -4446,6 +4453,12 @@ html.dark {
 }
 .profile__desc {
   margin-bottom: 16px;
+}
+
+.form-card__bottom {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
 }
 
 /*# sourceMappingURL=main.css.map */
